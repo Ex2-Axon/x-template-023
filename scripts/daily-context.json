@@ -1,0 +1,47 @@
+{
+  "day": 23,
+  "date": "2026-05-30",
+  "version": "1.23.0",
+  "project_name": "x-template-023",
+  "theme": {
+    "name": "Paper Bloom",
+    "style": "Paper-Organic, Minimal",
+    "mood": "Soft, inviting, clean, delicate"
+  },
+  "palette": {
+    "background": "#F8F8F8",
+    "surface": "#EEEEEE",
+    "primary": "#A7C957",
+    "accent": "#BC4749",
+    "text": "#333333",
+    "muted": "#AAAAAA"
+  },
+  "typography": {
+    "heading": "Inter",
+    "body": "Open Sans",
+    "size": "medium"
+  },
+  "layout": {
+    "structure": "centered",
+    "density": "normal",
+    "border_style": "Soft inset shadows, subtle rounded corners"
+  },
+  "animation": {
+    "level": "minimal",
+    "style": "Smooth fades, gentle transforms on hover"
+  },
+  "components": {
+    "hero_text": "SOFT LAYERS",
+    "subtitle": "A tranquil and refined digital experience inspired by sculpted paper.",
+    "button_label": "Explore Designs",
+    "badge_text": "New Collection"
+  },
+  "commit_message": "feat: UI Day 23 — Paper Bloom",
+  "source": "gemini-key1",
+  "selected_component": {
+    "category": "loaders",
+    "component": "DevVaradPatil_angry-dragonfly-63.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\loaders\\DevVaradPatil_angry-dragonfly-63.html",
+    "content": "<div class=\"loader\"></div>\n\n<style>\n/* Tags: black, gradient, loader, dark */\n.loader {\n  position: relative;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);\n  animation: glow 2s linear infinite;\n}\n@keyframes glow {\n  0% {\n    transform: rotate(0deg);\n    filter: hue-rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n    filter: hue-rotate(360deg);\n  }\n}\n.loader::before {\n  content: \"\";\n  position: absolute;\n  top: 3px;\n  left: 3px;\n  right: 3px;\n  bottom: 3px;\n  background: #212121;\n  border-radius: 50%;\n  z-index: 1000;\n}\n.loader::after {\n  content: \"\";\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  bottom: 0px;\n  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);\n  border-radius: 50%;\n  z-index: 1000;\n  z-index: 1;\n  filter: blur(30px);\n}\n\n</style>"
+  }
+}

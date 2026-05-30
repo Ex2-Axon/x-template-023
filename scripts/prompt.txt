@@ -1,0 +1,184 @@
+You are building a daily UI project. Below is the theme specification for today.
+
+## Theme Context (daily-context.json)
+```json
+{
+  "day": 23,
+  "date": "2026-05-30",
+  "version": "1.23.0",
+  "project_name": "x-template-023",
+  "theme": {
+    "name": "Paper Bloom",
+    "style": "Paper-Organic, Minimal",
+    "mood": "Soft, inviting, clean, delicate"
+  },
+  "palette": {
+    "background": "#F8F8F8",
+    "surface": "#EEEEEE",
+    "primary": "#A7C957",
+    "accent": "#BC4749",
+    "text": "#333333",
+    "muted": "#AAAAAA"
+  },
+  "typography": {
+    "heading": "Inter",
+    "body": "Open Sans",
+    "size": "medium"
+  },
+  "layout": {
+    "structure": "centered",
+    "density": "normal",
+    "border_style": "Soft inset shadows, subtle rounded corners"
+  },
+  "animation": {
+    "level": "minimal",
+    "style": "Smooth fades, gentle transforms on hover"
+  },
+  "components": {
+    "hero_text": "SOFT LAYERS",
+    "subtitle": "A tranquil and refined digital experience inspired by sculpted paper.",
+    "button_label": "Explore Designs",
+    "badge_text": "New Collection"
+  },
+  "commit_message": "feat: UI Day 23 — Paper Bloom",
+  "source": "gemini-key1",
+  "selected_component": {
+    "category": "Toggle-switches",
+    "component": "ercnersoy_evil-eel-92.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\Toggle-switches\\ercnersoy_evil-eel-92.html",
+    "content": "<label class=\"switch\">\n  <input class=\"ch\" type=\"checkbox\" />\n  <span class=\"slider\"></span>\n</label>\n\n<style>\n/* Tags: simple, switch, creative */\n/* The switch - the box around the slider */\n.switch {\n  font-size: 17px;\n  position: relative;\n  display: inline-block;\n  width: 3.5em;\n  height: 1.5em;\n}\n/* Hide default HTML checkbox */\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n/* The slider */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  inset: 0;\n  background-color: #ccc;\n  transition: 0.4s;\n  border-radius: 1rem 0rem 1rem;\n}\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 1.5em;\n  width: 1.4em;\n  left: 0em;\n  bottom: 0em;\n  background-color: white;\n  transition: 0.4s;\n  border-radius: 1rem 0rem 1rem;\n  border: 3px solid white;\n}\n\n.ch:checked + .slider {\n  background-color: #72eb67;\n}\n\n.ch:focus + .slider {\n  box-shadow: 0 0 1px #2196f3;\n}\n\n.ch:checked + .slider:before {\n  transform: translateX(2.2em);\n  background-color: green;\n  box-shadow: 0px 0px 40px 5px #72eb67;\n  border: 3px solid white;\n}\n\n.ch:checked + .slider::after {\n  content: \"|\";\n  color: white;\n  position: absolute;\n  right: 0.3rem;\n  top: -3.3px;\n  transform: rotate(45deg);\n}\n\n</style>"
+  }
+}
+```
+
+## Selected Component Reference
+- Category: Toggle-switches
+- Component: ercnersoy_evil-eel-92.html
+- Path: C:\Users\User\Documents\GitHub\Axon\x-components\Toggle-switches\ercnersoy_evil-eel-92.html
+
+Use the selected component HTML below as the primary design reference for the new UI. Keep the structure and styling assumptions in mind while rewriting the requested files.
+```html
+<label class="switch">
+  <input class="ch" type="checkbox" />
+  <span class="slider"></span>
+</label>
+
+<style>
+/* Tags: simple, switch, creative */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 1.5em;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 1rem 0rem 1rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.4em;
+  left: 0em;
+  bottom: 0em;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 1rem 0rem 1rem;
+  border: 3px solid white;
+}
+
+.ch:checked + .slider {
+  background-color: #72eb67;
+}
+
+.ch:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.ch:checked + .slider:before {
+  transform: translateX(2.2em);
+  background-color: green;
+  box-shadow: 0px 0px 40px 5px #72eb67;
+  border: 3px solid white;
+}
+
+.ch:checked + .slider::after {
+  content: "|";
+  color: white;
+  position: absolute;
+  right: 0.3rem;
+  top: -3.3px;
+  transform: rotate(45deg);
+}
+
+</style>
+```
+
+## Your Task
+Completely redesign the UI by rewriting these three files from scratch:
+- `src/App.tsx`
+- `src/App.css`
+- `src/index.css`
+
+## Rules for App.tsx
+1. Keep ALL existing imports:
+   - `import { useState, useEffect, useRef } from 'react'`
+   - `import reactLogo from './assets/react.svg'`
+   - `import viteLogo from './assets/vite.svg'`
+   - `import heroImg from './assets/hero.png'`
+   - `import './App.css'`
+2. Keep the `CounterNum` component (useRef + useEffect animation)
+3. Keep the counter button with `onClick` / `setCount` handler
+4. Keep the Documentation section (Vite/React links)
+5. Keep the Social section (GitHub/Discord/X/Bluesky links + SVG icons)
+6. Do NOT use CSS custom properties (`--var-name`) in inline `style` attributes — TypeScript will error
+
+## Rules for CSS
+- Apply the palette, typography, layout structure, animation level, and component text from the JSON above
+- Use Google Fonts via `@import` in `index.css`
+- Match the theme mood: Soft, inviting, clean, delicate
+
+## Mandatory Requirements (apply to every build)
+
+### 1. Responsive — Mobile First
+- Design for mobile (320px) first, scale up with `min-width` breakpoints
+- Touch targets minimum 44×44px
+- No horizontal scroll on any screen size
+- Fluid typography: use `clamp()` or responsive units (`rem`, `%`, `vw`)
+- Images and layout must reflow gracefully at 320px, 768px, 1280px
+
+### 2. Footer Copyright
+- The page MUST have a `<footer>` at the bottom
+- Footer text: `© 2026 Microtronic. All rights reserved.`
+- Style the footer to match the theme palette (muted text on surface background)
+
+### 3. SEO Standards
+- `index.html` must have a descriptive `<title>`: `SOFT LAYERS — Paper Bloom | Microtronic`
+- Add `<meta name="description">` with the subtitle: `A tranquil and refined digital experience inspired by sculpted paper.`
+- Add `<meta name="keywords">` relevant to the theme
+- Add Open Graph tags: `og:title`, `og:description`, `og:type` (website)
+- All images must have meaningful `alt` attributes
+- Use semantic HTML: `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>` where appropriate
+- Heading hierarchy: one `<h1>` (hero), `<h2>` for sections — no skipping levels
+
+## After saving all files
+1. Update `version` in `package.json` to `1.23.0`
+2. Update `<title>` and meta tags in `index.html` as specified above
+3. Run: `pnpm build`
+4. If build succeeds → write `done` to `scripts/build-done.flag`
+5. If build fails with TypeScript errors → fix them and rebuild
